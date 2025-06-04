@@ -51,7 +51,7 @@ export default function FanvilConfigForm() {
       {selected && (
         <>
           <h2 className="text-xl font-semibold">Настройки SIP1</h2>
-          {["phone_number", "display_name", "register_addr", "register_port", "register_user", "register_pswd", "register_ttl", "enable_reg"].map(f => (
+          {["phone_number", "display_name", "register_addr", "register_port", "register_user", "register_password", "register_ttl", "enable_reg"].map(f => (
             <input key={f} value={sip[f] || ""} onChange={e => updateSip(f, e.target.value)} placeholder={f.replace("_", " ")} className="border p-2 w-full mb-2" />
           ))}
 
