@@ -17,3 +17,13 @@ docker compose up --build
 ```
 
 После сборки приложение будет доступно по адресу [http://localhost:8080](http://localhost:8080).
+
+## Тесты
+
+Для запуска модульных тестов установите зависимости и выполните:
+
+```bash
+pip install -r backend/requirements.txt
+pip install pytest
+pytest
+```
