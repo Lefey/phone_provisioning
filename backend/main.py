@@ -29,7 +29,7 @@ class SIPAccount(BaseModel):
     register_addr: str
     register_port: str
     register_user: str
-    register_pswd: str
+    register_password: str
     register_ttl: str
     enable_reg: str
 
@@ -115,7 +115,7 @@ def extract_sip_account(config: str) -> SIPAccount:
         register_addr=g("Register Addr").group(1).strip() if g("Register Addr") else "",
         register_port=g("Register Port").group(1).strip() if g("Register Port") else "",
         register_user=g("Register User").group(1).strip() if g("Register User") else "",
-        register_pswd=g("Register Pswd").group(1).strip() if g("Register Pswd") else "",
+        register_password=g("Register Password").group(1).strip() if g("Register Password") else "",
         register_ttl=g("Register TTL").group(1).strip() if g("Register TTL") else "",
         enable_reg=g("Enable Reg").group(1).strip() if g("Enable Reg") else ""
     )
@@ -137,7 +137,7 @@ SIP1 Display Name     :{sip.display_name}
 SIP1 Register Addr    :{sip.register_addr}
 SIP1 Register Port    :{sip.register_port}
 SIP1 Register User    :{sip.register_user}
-SIP1 Register Pswd    :{sip.register_pswd}
+SIP1 Register Password:{sip.register_password}
 SIP1 Register TTL     :{sip.register_ttl}
 SIP1 Enable Reg       :{sip.enable_reg}
 <<END OF FILE>>"""
